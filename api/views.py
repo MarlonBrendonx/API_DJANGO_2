@@ -10,7 +10,7 @@ import xlwt
 
 
 def showTest(request):
-	return JsonResponse("ok",safe=False)
+	return JsonResponse("API-DJANGO",safe=False)
 	
 	
 @api_view(['GET'])
