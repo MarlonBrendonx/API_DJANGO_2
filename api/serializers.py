@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import User
-from .validator import Validator
 import secrets
 import string
 
@@ -9,11 +8,9 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 	def validate(self, data):	
-	  """
-	  
-	  	Se o campo senha for vazio, aplica a geração de senha aleatória de 4-20 caracteres
-	  	
-	  """
+		"""
+			Se o campo senha for vazio, aplica a geração de senha aleatória de 4-20 caracteres
+		"""
 		if data['password'] == '':				
 			
 			alphabet = string.ascii_letters + string.digits
